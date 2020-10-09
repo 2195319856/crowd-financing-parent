@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lzb.service.mapper.RoleMapper">
+<select id="selectByIdRole" resultType="com.lzb.admin.bean.Role" parameterType="Long">
+    SELECT
+	*
+FROM
+	t_admin_role AS ta
+INNER JOIN t_role AS tr ON ta.roleid = tr.id
+WHERE
+	ta.adminid = #{id}
+</select>
+	<select id="selectAll" resultType="com.lzb.admin.bean.Role">
+		select * from t_role;
+	</select>
+</mapper>

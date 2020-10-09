@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/crowd-financing-admin/admin-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd-financing-admin/admin-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd-financing-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd-financing-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd-financing-registry/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

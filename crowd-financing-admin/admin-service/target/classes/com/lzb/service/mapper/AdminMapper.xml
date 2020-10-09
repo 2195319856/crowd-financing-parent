@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lzb.service.mapper.AdminMapper">
+    <resultMap id="loginMap" type="com.lzb.admin.bean.Admin">
+        <id property="id" column="id" />
+        <result property="loginacct" column="loginacct"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="createtime" column="createtime"/>
+        <association property="role" javaType="com.lzb.admin.bean.Role">
+            <result property="name" column="name"/>
+        </association>
+        <collection property="role.menu" javaType="list" ofType="com.lzb.admin.bean.Menu">
+
+            <result property="menuid" column="menuid"/>
+            <result property="pid" column="pid"/>
+            <result property="menuname" column="menuname"/>
+            <result property="icon" column="icon"/>
+            <result property="url" column="url"/>
+        </collection>
+    </resultMap>
+
+    <select id="login" resultMap="loginMap" parameterType="com.lzb.admin.vo.AdminVo">
+        SELECT * FROM admin a left join t_admin_role t on a.id=t.adminid left join t_role r on t.roleid=r.id left join roleandmenu rm on r.id=rm.roleId left join t_menus m on rm.menu=m.menuid  WHERE a.loginacct=#{loginacct} and a.password=#{password};
+    </select>
+</mapper>

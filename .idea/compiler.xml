@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-service" />
+        <module name="crowd-financing-api-gateway" />
+        <module name="crowd-financing-registry" />
+        <module name="admin-interface" />
+        <module name="crowd-financing-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-interface" options="-parameters" />
+      <module name="admin-service" options="-parameters" />
+      <module name="crowd-financing-admin" options="-parameters" />
+      <module name="crowd-financing-api-gateway" options="-parameters" />
+      <module name="crowd-financing-common" options="-parameters" />
+      <module name="crowd-financing-login" options="-parameters" />
+      <module name="crowd-financing-parent" options="-parameters" />
+      <module name="crowd-financing-registry" options="-parameters" />
+    </option>
+  </component>
+</project>
